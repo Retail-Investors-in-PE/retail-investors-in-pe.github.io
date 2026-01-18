@@ -352,6 +352,34 @@ a:hover {
     color: var(--color-brand-primary);
 }
 
+/* Participants Grid */
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.participant {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    background: var(--color-bg-surface);
+    border-radius: 6px;
+}
+
+.participant-name {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+}
+
+.participant-affiliation {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
 /* Papers list */
 .paper-item {
     padding: 16px 0;

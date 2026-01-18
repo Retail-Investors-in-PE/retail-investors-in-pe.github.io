@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List — RIPE Working Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .topic-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--color-border-subtle);
+        }
+        .topic-tab {
+            padding: 10px 18px;
+            background: var(--color-bg-surface);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--color-text-main);
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .topic-tab:hover {
+            background: var(--color-border-subtle);
+            text-decoration: none;
+        }
+        .topic-tab.active {
+            background: var(--color-brand-primary);
+            color: white;
+        }
+        .topic-section {
+            display: none;
+        }
+        .topic-section.active {
+            display: block;
+        }
+        .topic-header {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: var(--color-text-main);
+        }
+        .reading-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .reading-card {
+            background: white;
+            border: 1px solid var(--color-border-subtle);
+            border-radius: 8px;
+            padding: 20px;
+            border-top: 3px solid var(--color-brand-primary);
+        }
+        .reading-card-title {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--color-text-main);
+            line-height: 1.4;
+        }
+        .reading-card-authors {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+        .reading-card-venue {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Retail Investors in PE (RIPE)<br>Working Group</h1>
+            <p class="organizers">Organized by <strong>Mike Ewens</strong> (Columbia) and <strong>Simon Oh</strong> (Columbia)</p>
+        </header>
+
+        <section class="intro-section">
+            <p>A working group exploring household access to private markets, focused on two questions:</p>
+            <ol class="questions-list">
+                <li>If and how can households benefit from private markets?</li>
+                <li>What are the policy and general equilibrium issues if households gain access to private markets?</li>
+            </ol>
+        </section>
+
+        <nav class="nav-links">
+            <a href="index.html">Fall 2025</a>
+            <a href="spring-2026.html">Spring 2026</a>
+            <a href="reading.html" class="active">Reading List</a>
+            <a href="papers.html">Related Papers</a>
+            <a href="media.html">Media</a>
+        </nav>
+
+        <section class="section">
+            <h2>Core Reading List</h2>
+
+            <div class="topic-tabs">
+                <button class="topic-tab active" data-topic="all">All Topics</button>
+                <button class="topic-tab" data-topic="session1">Session 1</button>
+                <button class="topic-tab" data-topic="session2">Session 2</button>
+                <button class="topic-tab" data-topic="session3">Session 3</button>
+                <button class="topic-tab" data-topic="session4">Session 4</button>
+                <button class="topic-tab" data-topic="session5">Session 5</button>
+            </div>
+
+            <div id="all" class="topic-section active">
+                <div class="topic-header">Session 1: How Do Households Access Financial Markets Today?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Exchange traded funds (ETFs)</div>
+                        <div class="reading-card-authors">Ben-David, Franzoni, Moussawi</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2017)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Mutual funds in equilibrium</div>
+                        <div class="reading-card-authors">Berk, van Binsbergen</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2017)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Demand-side and Supply-side Constraints in the Market for Financial Advice</div>
+                        <div class="reading-card-authors">Reuter, Schoar</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2024)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Conflicts of interest in asset management and advising</div>
+                        <div class="reading-card-authors">Spatt</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2020)</div>
+                    </div>
+                </div>
+
+                <div class="topic-header" style="margin-top: 32px;">Session 2: What are "Private Markets" Anyway?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Private Equity Fund Bargaining: What We Know (and Don't Know)</div>
+                        <div class="reading-card-authors">Clayton</div>
+                        <div class="reading-card-venue">Elgar Research Handbook (forthcoming)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Private or public equity? The evolving entrepreneurial finance landscape</div>
+                        <div class="reading-card-authors">Ewens, Farre-Mensa</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2022)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Buyouts: A primer</div>
+                        <div class="reading-card-authors">Jenkinson, Kim, Weisbach</div>
+                        <div class="reading-card-venue">Handbook of Corporate Finance (2023)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">How do venture capitalists make decisions?</div>
+                        <div class="reading-card-authors">Gompers, Gornall, Kaplan, Strebulaev</div>
+                        <div class="reading-card-venue">Journal of Financial Economics (2020)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Risk and return in private equity</div>
+                        <div class="reading-card-authors">Korteweg</div>
+                        <div class="reading-card-venue">Handbook of Corporate Finance (2023)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Risk adjustment in private equity returns</div>
+                        <div class="reading-card-authors">Korteweg</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2019)</div>
+                    </div>
+                </div>
+
+                <div class="topic-header" style="margin-top: 32px;">Session 3: What Do Households Actually See?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Understanding private equity funds: A guide to PE research in accounting</div>
+                        <div class="reading-card-authors">Borysoff, Mason, Utke</div>
+                        <div class="reading-card-venue">Journal of Financial Reporting (2024)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Private equity fund reporting quality, external monitors, and third-party service providers</div>
+                        <div class="reading-card-authors">Easton, Larocque, Mason, Utke</div>
+                        <div class="reading-card-venue">The Accounting Review (2025)</div>
+                    </div>
+                </div>
+
+                <div class="topic-header" style="margin-top: 32px;">Session 4: How Do Households Make Portfolio Decisions?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Household finance</div>
+                        <div class="reading-card-authors">Gomes, Haliassos, Ramadorai</div>
+                        <div class="reading-card-venue">Journal of Economic Literature (2021)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Asset allocation with private equity</div>
+                        <div class="reading-card-authors">Korteweg, Westerfield</div>
+                        <div class="reading-card-venue">Foundations and Trends in Finance (2022)</div>
+                    </div>
+                </div>
+
+                <div class="topic-header" style="margin-top: 32px;">Session 5: Who's Watching?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Expanding retail access to private markets: Regulatory developments and industry trends</div>
+                        <div class="reading-card-authors">Norton Rose Fulbright</div>
+                        <div class="reading-card-venue">Global Asset Management Review (2025)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="session1" class="topic-section">
+                <div class="topic-header">Session 1: How Do Households Access Financial Markets Today?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Exchange traded funds (ETFs)</div>
+                        <div class="reading-card-authors">Ben-David, Franzoni, Moussawi</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2017)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Mutual funds in equilibrium</div>
+                        <div class="reading-card-authors">Berk, van Binsbergen</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2017)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Demand-side and Supply-side Constraints in the Market for Financial Advice</div>
+                        <div class="reading-card-authors">Reuter, Schoar</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2024)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Conflicts of interest in asset management and advising</div>
+                        <div class="reading-card-authors">Spatt</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2020)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="session2" class="topic-section">
+                <div class="topic-header">Session 2: What are "Private Markets" Anyway?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Private Equity Fund Bargaining: What We Know (and Don't Know)</div>
+                        <div class="reading-card-authors">Clayton</div>
+                        <div class="reading-card-venue">Elgar Research Handbook (forthcoming)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Private or public equity? The evolving entrepreneurial finance landscape</div>
+                        <div class="reading-card-authors">Ewens, Farre-Mensa</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2022)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Buyouts: A primer</div>
+                        <div class="reading-card-authors">Jenkinson, Kim, Weisbach</div>
+                        <div class="reading-card-venue">Handbook of Corporate Finance (2023)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">How do venture capitalists make decisions?</div>
+                        <div class="reading-card-authors">Gompers, Gornall, Kaplan, Strebulaev</div>
+                        <div class="reading-card-venue">Journal of Financial Economics (2020)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Risk and return in private equity</div>
+                        <div class="reading-card-authors">Korteweg</div>
+                        <div class="reading-card-venue">Handbook of Corporate Finance (2023)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Risk adjustment in private equity returns</div>
+                        <div class="reading-card-authors">Korteweg</div>
+                        <div class="reading-card-venue">Annual Review of Financial Economics (2019)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="session3" class="topic-section">
+                <div class="topic-header">Session 3: What Do Households Actually See?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Understanding private equity funds: A guide to PE research in accounting</div>
+                        <div class="reading-card-authors">Borysoff, Mason, Utke</div>
+                        <div class="reading-card-venue">Journal of Financial Reporting (2024)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Private equity fund reporting quality, external monitors, and third-party service providers</div>
+                        <div class="reading-card-authors">Easton, Larocque, Mason, Utke</div>
+                        <div class="reading-card-venue">The Accounting Review (2025)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="session4" class="topic-section">
+                <div class="topic-header">Session 4: How Do Households Make Portfolio Decisions?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Household finance</div>
+                        <div class="reading-card-authors">Gomes, Haliassos, Ramadorai</div>
+                        <div class="reading-card-venue">Journal of Economic Literature (2021)</div>
+                    </div>
+                    <div class="reading-card">
+                        <div class="reading-card-title">Asset allocation with private equity</div>
+                        <div class="reading-card-authors">Korteweg, Westerfield</div>
+                        <div class="reading-card-venue">Foundations and Trends in Finance (2022)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="session5" class="topic-section">
+                <div class="topic-header">Session 5: Who's Watching?</div>
+                <div class="reading-cards">
+                    <div class="reading-card">
+                        <div class="reading-card-title">Expanding retail access to private markets: Regulatory developments and industry trends</div>
+                        <div class="reading-card-authors">Norton Rose Fulbright</div>
+                        <div class="reading-card-venue">Global Asset Management Review (2025)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>RIPE Working Group — Columbia Business School</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('.topic-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.topic-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.topic-section').forEach(s => s.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.topic).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
